@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/salao/front/css/style.css">
+    <link rel="stylesheet" href="/front/css/style.css">
     <title>Agendamento Online</title>
 </head>
 <body onload="mostrarData(),mostrarData2(),mostrarData3(),mostrarData4(),mostrarData5()";>
@@ -20,7 +20,7 @@
                         <button type="button" class="dayButton" id="day2"><span id="day2week">Ter</span>
                         <button type="button" class="dayButton" id="day3"><span id="day3week">Ter</span>
                         <button type="button" class="dayButton" id="day4"><span id="day4week">Ter</span>
-                        <button type="button" class="dayButton" id="day5" onclick="mostrarFormDados()";><span id="day5week"></span>
+                        <button type="button" class="dayButton" id="day5" ><span id="day5week"></span>
                     </div>
                 </div>
                 <br>
@@ -34,22 +34,11 @@
                     </select>
                 </div>
                 <div id="times">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Horários</th>
-                            </tr>
-                        </thead>
-                        <tr>
-                            <td>10:00</td>
-                        </tr>
-                        <tr>
-                            <td>11:00</td>
-                        </tr>
-                        <tr>
-                            <td>12:00</td>
-                        </tr>
-                    </table>
+                    <p>Horario</p>
+                    <select name="" id="selectTime">
+                        <option value="">Horario</option>
+                        
+                    </select>
                 </div>
                 <div id="clientDados" >
                     <form  action="">
@@ -61,7 +50,7 @@
                              <p>Obrigatório informar o número de seu WhatsApp ou Celular</p>
                              <input class="inputbox" id="telClient" type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" placeholder="Telefone com DDD" required>
                              <p>Obrigatório informar seu CPF</p>
-                             <input class="inputbox" id="cpfClient" type="tel" placeholder="CPF"required>
+                             <input class="inputbox" id="cpfClient" type="tel" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" placeholder="CPF"required>
                         </fieldset>
                     </form>
                 </div>
@@ -79,6 +68,6 @@
         </form>
         
     </div>
-    <script src="/salao/front/js/agenda.js"></script>
+    <script src="/front/js/agenda.js"></script>
 </body>
 </html>
