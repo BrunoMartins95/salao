@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/salao/front/css/style.css">
+    <title>Agendamento Online</title>
+</head>
+<body onload="mostrarData(),mostrarData2(),mostrarData3(),mostrarData4(),mostrarData5()";>
+    
+    <div class="box">
+        <form id="agenda" action="">
+            <fieldset>
+                <legend><b>Agendamento On-line</b></legend>
+                <div id="month">Mes Atual</div>
+                <div id="dates">
+                    <div id="days">
+                        <button type="button" class="dayButton" id="day1"><span id="day1week">Ter</span>
+                        <button type="button" class="dayButton" id="day2"><span id="day2week">Ter</span>
+                        <button type="button" class="dayButton" id="day3"><span id="day3week">Ter</span>
+                        <button type="button" class="dayButton" id="day4"><span id="day4week">Ter</span>
+                        <button type="button" class="dayButton" id="day5" onclick="mostrarFormDados()";><span id="day5week"></span>
+                    </div>
+                </div>
+                <br>
+                <div id="services">
+                    <p>Servicos</p>
+                    <select name="services" id="service">
+                        <option value="">Corte</option>
+                        <option value="">Pintura</option>
+                        <option value="">Outros</option>
+                        
+                    </select>
+                </div>
+                <div id="times">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Horários</th>
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td>10:00</td>
+                        </tr>
+                        <tr>
+                            <td>11:00</td>
+                        </tr>
+                        <tr>
+                            <td>12:00</td>
+                        </tr>
+                    </table>
+                </div>
+                <div id="clientDados" >
+                    <form  action="">
+                        <fieldset>
+                            <legend>Meus Dados</legend>
+                            <p>Obrigatório informar seu nome completo</p>
+                             <input class="inputbox" id="nameClient" type="text" placeholder="Nome Completo" required>
+                             <br>
+                             <p>Obrigatório informar o número de seu WhatsApp ou Celular</p>
+                             <input class="inputbox" id="telClient" type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" placeholder="Telefone com DDD" required>
+                             <p>Obrigatório informar seu CPF</p>
+                             <input class="inputbox" id="cpfClient" type="tel" placeholder="CPF"required>
+                        </fieldset>
+                    </form>
+                </div>
+                <form action="">
+                    <fieldset>
+                        <legend>Revise seu agendamento:</legend>
+                         <p>Data e Hora:</p>
+                         <input type="text" id="confirmDate">
+                         <p>Servicos:</p>
+                         <input type="text" id="confirmDate">
+                    </fieldset>
+                </form>
+                <input type="submit" name="submit" id="submit">
+            </fieldset>
+        </form>
+        
+    </div>
+    <script src="/salao/front/js/agenda.js"></script>
+</body>
+</html>
