@@ -1,24 +1,15 @@
+const express = require('express');
 
+const insertClient = require('./controller/client.controller')
 
-(async () => {
-const connect = require("./connect");
-console.log('Começou!');
+const app = express();
 
-console.log('INSERT INTO AGENDAMENTO');
-const result = await connect.insertDate({agen_data: "2023-10-20T23:05:25.000Z", agen_client: "Cliente do Corte", agen_servico:"Pintura"});
-console.log(result);
+app.use(express.json());
 
-console.log('UPDATE AGENDAMENTO');
-const result2 = await connect.updateDate(3,{agen_data: "2023-06-14T23:05:25.000Z", agen_client: "Cliente do Corte", agen_servico:"Corte"});
-console.log(result2);
+app.post("/", insertClient)
 
-console.log('DELETE AGENDAMENTO');
-const result3 = await connect.deleteDate(4);
-console.log(result3);
+app.listen(80, () => {
+    console.log('backend online');
+});
 
-console.log('SELECT * FROM AGENDAMENTO');
-const agendamentos = await connect.selectDates();
-console.log(agendamentos);
-
-})();
 

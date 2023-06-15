@@ -1,0 +1,110 @@
+/* GERAL */
+.section-primary {
+    background-color: var(--bg-primary);    
+}
+
+.section-secondary {
+    background-color: var(--bg-secundary);    
+}
+
+/* MAIN */
+main {
+    flex: 1;
+}
+
+/* CONFIGURACAO GERAL PARA TODAS AS SECOES */
+section {
+    padding-right: 25px;
+    padding-left: 25px;
+}
+
+/* SECAO 01 - CAPA */
+#section-01 {
+    padding: 180px var(--pd-side) 180px var(--pd-side);
+    text-align: center;
+}
+
+#section-01 p {
+    padding: 20px;
+}
+
+/* SECAO 02 - SAUDACOES */
+#section-02 {
+    padding: 100px var(--pd-side) 70px var(--pd-side);
+    text-align: center;
+}
+
+#section-02 p {
+    margin: 20px 0px;
+}
+
+/* SECAO 03 - NOSSOS SERVICOS */
+#section-03 {
+    padding: 100px var(--pd-side) 100px var(--pd-side);
+    text-align: center;
+}
+
+#section-03 h2 {
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+/* SECAO 04 - CALL TO ACTION */
+#section-04 {
+    padding: 100px var(--pd-side) 100px var(--pd-side);
+    text-align: center;
+}
+
+#section-04 h2 {
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+#section-04 input {
+    width: 50%;
+    text-align: center;
+    margin: auto;
+    border: none;
+    border-radius: var(--bdr-primary);
+}
+
+/* SECAO 05 - GALERIA */
+#section-05 {
+    padding: 100px var(--pd-side) 100px var(--pd-side);
+    text-align: center;
+}
+
+#section-05 h2 {
+    margin-bottom: 30px;
+}
+
+.carousel-item img {
+    height: 100%;
+    width: 100%;
+}
+
+/* SECAO 06 - ONDE ESTAMOS */
+#section-06 {
+    padding: 100px var(--pd-side) 75px var(--pd-side);
+    text-align: center;
+}
+
+#section-06 h2 {
+    margin-bottom: 30px;
+}
+
+#section-06 h5 {
+    margin-top: 30px;
+}
+
+#section-06-map {
+    width: 70%
+}
+
+#section-06-complement {
+    width: 30%;
+}
+
+#section-06-social-media {
+    margin-top: 14%;
+}

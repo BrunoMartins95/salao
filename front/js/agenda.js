@@ -56,3 +56,27 @@ function mostrarFormDados() {
     formDados.style.display = "none"
 
 }
+
+const getDate = () => {
+    const selectedDate = this.document.activeElement.firstElementChild.innerText;
+    document.getElementById("confirmDate").value = selectedDate;
+
+}
+
+function getService (){
+    let select = document.getElementById("service");
+    var opcaoTexto = select.options[select.selectedIndex].text;
+    document.getElementById("confirmService").value = opcaoTexto;
+}
+
+
+function enviarFormDados () {
+
+    let agen_data = document.getElementById("confirmDate").value;
+    let agen_client = document.getElementById("nameClient").value;
+    let agen_service = document.getElementById("confirmService").value;
+
+    console.log({agen_data, agen_client, agen_service})
+
+
+}

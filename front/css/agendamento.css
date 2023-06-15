@@ -1,0 +1,17 @@
+header{
+    height: 200px;
+    background-color: #FFE5DA;
+}
+
+body{
+    background-color: #FFE5DA;
+}
+
+header img {
+    width: 200px;
+}
+
+#agenda{
+    display: flex;
+    justify-content: center;
+}
