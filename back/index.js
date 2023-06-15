@@ -1,24 +1,24 @@
-const connect = require('./connect');
-// pegar dados do banco de dados
 
-const inserts = async (order) => {
-    const columns = Object.keys(order)
-      .join(', ');
-    
-    const placeholders = Object.keys(order)
-      .map((_key) => ('?'))
-      .join(', ');
-  
-    const [{ insertId }] = await connect.execute(
-      `INSERT INTO products (${columns}) VALUES (${placeholders})`,
-      [...Object.values(order)],
-    );
-  
-    return insertId;
-  };
 
-    // criar as variaveis de conexão 
+(async () => {
+const connect = require("./connect");
+console.log('Começou!');
 
-// Criar Query em SQL para executar comandos no banco de dados
+console.log('INSERT INTO AGENDAMENTO');
+const result = await connect.insertDate({agen_data: "2023-10-20T23:05:25.000Z", agen_client: "Cliente do Corte", agen_servico:"Pintura"});
+console.log(result);
 
-// Criar endpoint para inserir dados no banco de dados
+console.log('UPDATE AGENDAMENTO');
+const result2 = await connect.updateDate(3,{agen_data: "2023-06-14T23:05:25.000Z", agen_client: "Cliente do Corte", agen_servico:"Corte"});
+console.log(result2);
+
+console.log('DELETE AGENDAMENTO');
+const result3 = await connect.deleteDate(4);
+console.log(result3);
+
+console.log('SELECT * FROM AGENDAMENTO');
+const agendamentos = await connect.selectDates();
+console.log(agendamentos);
+
+})();
+
