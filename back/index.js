@@ -1,15 +1,13 @@
+const { error } = require('console');
 const express = require('express');
-
-const insertClient = require('./controller/client.controller')
-
 const app = express();
+const port = 3000;
 
-app.use(express.json());
-
-app.post("/", insertClient)
-
-app.listen(80, () => {
-    console.log('backend online');
+app.listen(port, (error)=> {
+    if (error){
+        console.log("back morreu");
+        return
+    }
+    console.log("back está de pé");
 });
-
 
